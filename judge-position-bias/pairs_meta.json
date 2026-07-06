@@ -1,0 +1,20 @@
+{
+ "n_unique_turn1_pairs": 910,
+ "n_sampled": 350,
+ "max_prompt_tokens": 3072,
+ "seed": 0,
+ "label_dist_sample": {
+  "m1": 120,
+  "m2": 119,
+  "tie": 71,
+  "no-majority": 40
+ },
+ "label_dist_all": {
+  "m1": 311,
+  "m2": 310,
+  "tie": 184,
+  "no-majority": 105
+ },
+ "dataset": "lmsys/mt_bench_human_judgments split=human turn=1",
+ "template_sha256": "975db383e05f56b3"
+}

@@ -1,0 +1,131 @@
+{
+ "per_model": {
+  "Qwen2.5-0.5B-Instruct": {
+   "n": 350.0,
+   "flip_rate": 0.9686,
+   "primacy_share": 0.9115,
+   "recency_share": 0.0,
+   "p_pick_slot1": 0.9329,
+   "consistent_frac": 0.0314,
+   "tie_frac_deb": 0.0143,
+   "human_agree_on_consistent": 0.8,
+   "n_human_labeled_consistent": 5.0,
+   "flip_rate_ci95": [
+    0.9485714285714286,
+    0.9857142857142858
+   ],
+   "p_pick_slot1_ci95": [
+    0.9114285714285715,
+    0.9528571428571428
+   ]
+  },
+  "Qwen2.5-1.5B-Instruct": {
+   "n": 350.0,
+   "flip_rate": 0.4457,
+   "primacy_share": 0.9487,
+   "recency_share": 0.0513,
+   "p_pick_slot1": 0.7,
+   "consistent_frac": 0.5543,
+   "tie_frac_deb": 0.0,
+   "human_agree_on_consistent": 0.8456,
+   "n_human_labeled_consistent": 149.0,
+   "flip_rate_ci95": [
+    0.3942857142857143,
+    0.49714285714285716
+   ],
+   "p_pick_slot1_ci95": [
+    0.6728571428571428,
+    0.7271428571428571
+   ]
+  },
+  "Qwen2.5-3B-Instruct": {
+   "n": 350.0,
+   "flip_rate": 0.4829,
+   "primacy_share": 0.0769,
+   "recency_share": 0.4083,
+   "p_pick_slot1": 0.22,
+   "consistent_frac": 0.5171,
+   "tie_frac_deb": 0.1914,
+   "human_agree_on_consistent": 0.8171,
+   "n_human_labeled_consistent": 82.0,
+   "flip_rate_ci95": [
+    0.42857142857142855,
+    0.5342857142857143
+   ],
+   "p_pick_slot1_ci95": [
+    0.19,
+    0.25
+   ]
+  },
+  "Qwen2.5-7B-Instruct": {
+   "n": 350.0,
+   "flip_rate": 0.1886,
+   "primacy_share": 0.5455,
+   "recency_share": 0.2121,
+   "p_pick_slot1": 0.5043,
+   "consistent_frac": 0.8114,
+   "tie_frac_deb": 0.0257,
+   "human_agree_on_consistent": 0.8762,
+   "n_human_labeled_consistent": 210.0,
+   "flip_rate_ci95": [
+    0.14857142857142858,
+    0.22857142857142856
+   ],
+   "p_pick_slot1_ci95": [
+    0.48142857142857143,
+    0.5271428571428571
+   ]
+  }
+ },
+ "pairwise_flip_deltas": {
+  "Qwen2.5-0.5B-Instruct - Qwen2.5-1.5B-Instruct": {
+   "delta_flip": 0.5229,
+   "ci95": [
+    0.4686,
+    0.58
+   ]
+  },
+  "Qwen2.5-0.5B-Instruct - Qwen2.5-3B-Instruct": {
+   "delta_flip": 0.4857,
+   "ci95": [
+    0.4314,
+    0.54
+   ]
+  },
+  "Qwen2.5-0.5B-Instruct - Qwen2.5-7B-Instruct": {
+   "delta_flip": 0.78,
+   "ci95": [
+    0.7343,
+    0.8229
+   ]
+  },
+  "Qwen2.5-1.5B-Instruct - Qwen2.5-3B-Instruct": {
+   "delta_flip": -0.0371,
+   "ci95": [
+    -0.1114,
+    0.0371
+   ]
+  },
+  "Qwen2.5-1.5B-Instruct - Qwen2.5-7B-Instruct": {
+   "delta_flip": 0.2571,
+   "ci95": [
+    0.2,
+    0.3143
+   ]
+  },
+  "Qwen2.5-3B-Instruct - Qwen2.5-7B-Instruct": {
+   "delta_flip": 0.2943,
+   "ci95": [
+    0.2286,
+    0.36
+   ]
+  }
+ },
+ "protocol": {
+  "n_pairs": 350,
+  "template_sha256": "975db383e05f56b3",
+  "verdict_extraction": "argmax over next-token logprobs of tokens A/B/C",
+  "bootstrap_reps": 10000,
+  "seed": 0
+ }
+}
