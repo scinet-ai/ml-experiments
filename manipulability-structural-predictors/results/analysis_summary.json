@@ -1,0 +1,238 @@
+{
+  "n_rows": 200,
+  "n_features": 33,
+  "width_mean": 0.6303492363124039,
+  "width_std": 0.18237956709489203,
+  "OLS_full_R2_oos": 0.8394,
+  "OLS_top_standardized_coefs": [
+    [
+      "upstream_size",
+      -0.2772
+    ],
+    [
+      "n_bn_nodes",
+      -0.2772
+    ],
+    [
+      "depth_weighted_mass",
+      0.2051
+    ],
+    [
+      "n_conclusions",
+      0.1113
+    ],
+    [
+      "depth_weighted_signed",
+      -0.1015
+    ],
+    [
+      "n_undercut",
+      0.0858
+    ],
+    [
+      "n_support",
+      0.0737
+    ],
+    [
+      "con_mass",
+      -0.0719
+    ],
+    [
+      "n_nodes",
+      0.0676
+    ],
+    [
+      "n_edges",
+      0.0676
+    ]
+  ],
+  "GBM_R2_oos": 0.8513,
+  "GBM_permutation_importance_top": [
+    [
+      "depth_weighted_mass",
+      0.5257,
+      0.0723
+    ],
+    [
+      "max_fanin",
+      0.1273,
+      0.0251
+    ],
+    [
+      "n_axioms",
+      0.054,
+      0.0133
+    ],
+    [
+      "con_mass",
+      0.025,
+      0.0151
+    ],
+    [
+      "mean_fanin",
+      0.0195,
+      0.0054
+    ],
+    [
+      "n_nodes",
+      0.0103,
+      0.002
+    ],
+    [
+      "pro_mass",
+      0.0044,
+      0.0029
+    ],
+    [
+      "asymmetry",
+      0.0038,
+      0.006
+    ],
+    [
+      "signed_mass_typesign",
+      0.0037,
+      0.0012
+    ],
+    [
+      "rebut_fraction",
+      0.0019,
+      0.0007
+    ],
+    [
+      "n_conclusions",
+      0.0013,
+      0.0009
+    ],
+    [
+      "attack_fraction",
+      0.0011,
+      0.0014
+    ]
+  ],
+  "hypothesis_nested_R2": {
+    "total_mass_only": [
+      0.4053,
+      [
+        "total_mass"
+      ]
+    ],
+    "asymmetry_only": [
+      0.0392,
+      [
+        "asymmetry"
+      ]
+    ],
+    "mass_plus_asym": [
+      0.4102,
+      [
+        "total_mass",
+        "asymmetry"
+      ]
+    ],
+    "mass_asym_pro_con": [
+      0.4259,
+      [
+        "total_mass",
+        "asymmetry",
+        "pro_mass",
+        "con_mass"
+      ]
+    ],
+    "depth_weighted_mass_only": [
+      0.6246,
+      [
+        "depth_weighted_mass"
+      ]
+    ],
+    "mass_asym_depth": [
+      0.4208,
+      [
+        "total_mass",
+        "asymmetry",
+        "depth"
+      ]
+    ],
+    "mass_asym_depthw": [
+      0.6175,
+      [
+        "depth_weighted_mass",
+        "asymmetry"
+      ]
+    ],
+    "depth_only": [
+      0.2931,
+      [
+        "depth"
+      ]
+    ],
+    "pro_and_con": [
+      0.4901,
+      [
+        "pro_mass",
+        "con_mass"
+      ]
+    ],
+    "full": [
+      0.8394,
+      "all"
+    ],
+    "GBM_core3_total_asym_depthw": [
+      0.7677,
+      [
+        "total_mass",
+        "asymmetry",
+        "depth_weighted_mass"
+      ]
+    ]
+  },
+  "pearson_corr_with_width": {
+    "total_mass": 0.573,
+    "asymmetry": -0.4651,
+    "pro_mass": 0.493,
+    "con_mass": 0.632,
+    "depth": 0.397,
+    "depth_weighted_mass": 0.7687,
+    "n_nodes": 0.5868,
+    "attack_fraction": 0.2896,
+    "max_abs_log": 0.4459,
+    "abs_signed_mass": 0.3113,
+    "root_prior": -0.0013
+  },
+  "knife_edge_width_gt_0.6": {
+    "n": 115,
+    "prevalence": 0.575,
+    "signature_mean": {
+      "total_mass": 30.454,
+      "asymmetry": 0.246,
+      "pro_mass": 17.224,
+      "con_mass": 13.23,
+      "depth": 3.852,
+      "depth_weighted_mass": 14.893,
+      "n_nodes": 22.47,
+      "attack_fraction": 0.348,
+      "max_abs_log": 2.491,
+      "mean_fanin": 2.5,
+      "root_prior": 0.473,
+      "true_post": 0.534
+    }
+  },
+  "near_unmovable_width_lt_0.1": {
+    "n": 0,
+    "prevalence": 0.0,
+    "signature_mean": {}
+  },
+  "overall_signature_mean": {
+    "total_mass": 21.69,
+    "asymmetry": 0.333,
+    "pro_mass": 12.591,
+    "con_mass": 9.1,
+    "depth": 3.39,
+    "depth_weighted_mass": 11.274,
+    "n_nodes": 16.22,
+    "attack_fraction": 0.306,
+    "max_abs_log": 2.367,
+    "mean_fanin": 2.314,
+    "root_prior": 0.475,
+    "true_post": 0.554
+  }
+}

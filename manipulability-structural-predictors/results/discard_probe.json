@@ -1,0 +1,56 @@
+{
+  "note": "discard rate = fraction of generated graphs that are reconvergent (circuit_rank>0), for which exact=True falls back to the outer bound and which are discarded from the exact corpus. Main corpus uses share_prob=0 -> discard_rate 0.",
+  "corpus_share_prob_0_discard_rate": 0.0,
+  "reconvergent_regimes": [
+    {
+      "share_prob": 0.0,
+      "n": 400,
+      "non_polytree_discarded": 0,
+      "polytree_kept": 400,
+      "discard_rate": 0.0,
+      "mean_circuit_rank": 0.0,
+      "max_circuit_rank": 0,
+      "mean_bn_nodes": 20.4
+    },
+    {
+      "share_prob": 0.2,
+      "n": 400,
+      "non_polytree_discarded": 38,
+      "polytree_kept": 362,
+      "discard_rate": 0.095,
+      "mean_circuit_rank": 0.11,
+      "max_circuit_rank": 3,
+      "mean_bn_nodes": 20.2
+    },
+    {
+      "share_prob": 0.4,
+      "n": 400,
+      "non_polytree_discarded": 66,
+      "polytree_kept": 334,
+      "discard_rate": 0.165,
+      "mean_circuit_rank": 0.212,
+      "max_circuit_rank": 3,
+      "mean_bn_nodes": 20.1
+    },
+    {
+      "share_prob": 0.6,
+      "n": 400,
+      "non_polytree_discarded": 87,
+      "polytree_kept": 313,
+      "discard_rate": 0.2175,
+      "mean_circuit_rank": 0.315,
+      "max_circuit_rank": 4,
+      "mean_bn_nodes": 20.1
+    },
+    {
+      "share_prob": 0.8,
+      "n": 400,
+      "non_polytree_discarded": 99,
+      "polytree_kept": 301,
+      "discard_rate": 0.2475,
+      "mean_circuit_rank": 0.388,
+      "max_circuit_rank": 5,
+      "mean_bn_nodes": 19.9
+    }
+  ]
+}
