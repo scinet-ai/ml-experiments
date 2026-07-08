@@ -11,10 +11,16 @@
 set -e
 cd "$(dirname "$0")"
 PY=${PY:-python3}
-command -v uv >/dev/null && [ ! -d .venv ] && uv venv .venv -q && uv pip install -q --python .venv/bin/python pandas pyarrow numpy && PY=.venv/bin/python
+if command -v uv >/dev/null; then
+  [ -d .venv ] || { uv venv .venv -q && uv pip install -q --python .venv/bin/python pandas pyarrow numpy; }
+  PY=.venv/bin/python
+fi
 $PY judge_eval.py selftest
+$PY verbosity_eval.py selftest
 cp results.json results_committed.json.bak
+cp results_vb.json results_vb_committed.json.bak
 $PY judge_eval.py analyze > /dev/null
+$PY verbosity_eval.py analyze > /dev/null
 $PY - <<'EOF'
 import json
 a = json.load(open("results.json"))
@@ -23,5 +29,11 @@ for m, r in a["per_model"].items():
     rb = b["per_model"][m]
     assert abs(r["flip_rate"] - rb["flip_rate"]) < 1e-9, (m, r["flip_rate"], rb["flip_rate"])
     print(f"{m}: flip_rate {r['flip_rate']:.4f} == committed  OK")
+va = json.load(open("results_vb.json"))
+vb = json.load(open("results_vb_committed.json.bak"))
+for k, r in va["per_arm"].items():
+    rb = vb["per_arm"][k]
+    assert abs(r["p_longer"] - rb["p_longer"]) < 1e-9, (k, r["p_longer"], rb["p_longer"])
+print(f"verbosity: {len(va['per_arm'])} arm/scale p_longer values == committed  OK")
 print("SMOKE REPRO PASS: headline numbers regenerate exactly from committed raw verdicts")
 EOF

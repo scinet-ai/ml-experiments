@@ -286,7 +286,8 @@ def cmd_analyze(args):
     if not src.exists():
         src = HERE / "pairs_public.parquet"  # zero-download smoke path
     pairs = pd.read_parquet(src)
-    models = sorted(HERE.glob("verdicts_*.csv"))
+    # position-bias verdict files only (verdicts_vb_* belong to verbosity_eval.py)
+    models = sorted(p for p in HERE.glob("verdicts_*.csv") if not p.name.startswith("verdicts_vb_"))
     results, per_model_df = {}, {}
     rng = np.random.default_rng(SEED)
     B = 10000
