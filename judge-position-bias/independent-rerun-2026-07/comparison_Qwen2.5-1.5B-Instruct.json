@@ -1,0 +1,61 @@
+{
+ "model": "Qwen2.5-1.5B-Instruct",
+ "row_comparison": {
+  "n_rows": 700,
+  "verdict_agreement": 1.0,
+  "n_verdict_disagreements": 0,
+  "prompt_tokens_match_frac": 1.0,
+  "abs_logprob_delta": {
+   "mean": 2e-05,
+   "median": 2e-05,
+   "p95": 5e-05,
+   "max": 5e-05
+  },
+  "disagreement_committed_top2_margins": []
+ },
+ "metrics_mine": {
+  "n": 350,
+  "flip_rate": 0.4457,
+  "primacy_share": 0.9487,
+  "recency_share": 0.0513,
+  "p_pick_slot1": 0.7,
+  "consistent_frac": 0.5543,
+  "human_agree_on_consistent": 0.8456,
+  "n_human_labeled_consistent": 149,
+  "flip_rate_ci95": [
+   0.3942857142857143,
+   0.49714285714285716
+  ],
+  "p_pick_slot1_ci95": [
+   0.6728571428571428,
+   0.7285714285714285
+  ]
+ },
+ "metrics_recomputed_from_committed_csv": {
+  "n": 350,
+  "flip_rate": 0.4457,
+  "primacy_share": 0.9487,
+  "recency_share": 0.0513,
+  "p_pick_slot1": 0.7,
+  "consistent_frac": 0.5543,
+  "human_agree_on_consistent": 0.8456,
+  "n_human_labeled_consistent": 149
+ },
+ "metrics_published_results_json": {
+  "flip_rate": 0.4457,
+  "primacy_share": 0.9487,
+  "recency_share": 0.0513,
+  "p_pick_slot1": 0.7,
+  "consistent_frac": 0.5543,
+  "human_agree_on_consistent": 0.8456,
+  "n_human_labeled_consistent": 149.0,
+  "flip_rate_ci95": [
+   0.3942857142857143,
+   0.49714285714285716
+  ],
+  "p_pick_slot1_ci95": [
+   0.6728571428571428,
+   0.7271428571428571
+  ]
+ }
+}

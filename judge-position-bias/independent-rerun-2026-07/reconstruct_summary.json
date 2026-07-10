@@ -1,0 +1,8 @@
+{
+ "n_pairs": 350,
+ "template_sha": "975db383e05f56b3",
+ "len1_mismatch": 0,
+ "len2_mismatch": 0,
+ "prompt_tok_mismatch": 0,
+ "answer_collisions": 0
+}
