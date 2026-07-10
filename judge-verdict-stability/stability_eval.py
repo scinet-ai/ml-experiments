@@ -9,7 +9,7 @@ orders. Base greedy verdicts are REUSED from verdicts_<model>.csv (finding cf4e6
 Three semantically-null perturbation families, all measured on the SAME instances
 (pair x order):
   (1) SAMPLING       greedy (argmax) vs T=0.7 n=5 majority (actual generation).
-  (2) RUBRIC PARAPHRASE  3 human-written semantically-equivalent rewrites of the
+  (2) RUBRIC PARAPHRASE  3 author-written (AI research agent) semantically-equivalent rewrites of the
                      judging instruction (scaffold + answer-format request identical).
   (3) FORMATTING     3 FormatSpread-style surface perturbations (separator style,
                      section ordering, field-label casing); instruction + answer-format

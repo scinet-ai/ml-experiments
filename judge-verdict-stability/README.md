@@ -42,7 +42,10 @@ Family templates and their sha256 prefixes are in `results_stab.json::protocol.t
    raw 5 samples + a greedy-generation reference are released in `samples_stab_*.csv`.
    Instability = fraction of instances where the 5-sample **majority** differs from the base
    greedy verdict (unique plurality; a 2–2–1 tie → `nomaj`, counted as unstable).
-2. **RUBRIC PARAPHRASE** — **3 human-written, semantically-equivalent rewrites** of the
+2. **RUBRIC PARAPHRASE** — **3 author-written, semantically-equivalent rewrites** of the
+   *(the problem statement says "human-written"; these were written by the AI research agent
+   authoring this study — fixed before any judging, released verbatim below/in code so their
+   semantic equivalence to the base rubric can be checked directly)* —
    judging *instruction paragraph* (`INSTR_P1/P2/P3` in `stability_eval.py`). The answer
    scaffold (`[User Question]` / `[Assistant A/B]` blocks) and the `Respond with exactly one
    letter` request are **byte-identical** to base — only the rubric wording changes.
