@@ -1,0 +1,62 @@
+{
+  "attempted": 200,
+  "kept": 200,
+  "discarded_nonpolytree": 0,
+  "failed_generation": 0,
+  "discard_rate_of_generated": 0.0,
+  "wall_seconds": 6.8,
+  "ms_per_attempt": 34.12,
+  "per_regime": {
+    "baseline": {
+      "kept": 56,
+      "disc": 0,
+      "fail": 0
+    },
+    "attacks_heavy": {
+      "kept": 26,
+      "disc": 0,
+      "fail": 0
+    },
+    "rich_defeaters": {
+      "kept": 34,
+      "disc": 0,
+      "fail": 0
+    },
+    "deep_chains": {
+      "kept": 18,
+      "disc": 0,
+      "fail": 0
+    },
+    "wide": {
+      "kept": 18,
+      "disc": 0,
+      "fail": 0
+    },
+    "large": {
+      "kept": 16,
+      "disc": 0,
+      "fail": 0
+    },
+    "lr_spread": {
+      "kept": 16,
+      "disc": 0,
+      "fail": 0
+    },
+    "calibrated": {
+      "kept": 16,
+      "disc": 0,
+      "fail": 0
+    }
+  },
+  "param_seed_base": 8000000,
+  "regime_weights": {
+    "baseline": 28,
+    "attacks_heavy": 13,
+    "rich_defeaters": 17,
+    "deep_chains": 9,
+    "wide": 9,
+    "large": 8,
+    "lr_spread": 8,
+    "calibrated": 8
+  }
+}
