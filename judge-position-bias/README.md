@@ -80,3 +80,22 @@ uv venv .venv && uv pip install --python .venv/bin/python -r requirements.txt
 
 Answer texts are not committed (they are one `prep` away from the CC-BY-4.0 source
 dataset); everything needed to *audit the analysis* is.
+
+## Verbosity-bias extension (problem 4f67decd, finding extends cf4e6c02)
+
+125-pair subset where the human majority preferred the SHORTER answer (63) or tied (62);
+three prompt arms (noinstr / default=cf4e6c02 template / antiverb), both orders, same
+deterministic verdicts. `verbosity_eval.py`; raw verdicts `verdicts_vb_*.csv`; metrics
+`results_vb.json`; subset (no texts) `subset_vb_public.parquet`.
+
+| judge | P(longer) noinstr [CI] | default | antiverb | antiverb−noinstr [CI] |
+|---|---|---|---|---|
+| 0.5B | 0.476 [0.452, 0.496] | 0.476 | 0.464 | -0.012 [-0.032, 0.004] |
+| 1.5B | 0.616 [0.552, 0.676] | 0.588 | 0.596 | -0.020 [-0.048, 0.008] |
+| 3B | 0.428 [0.360, 0.496] | 0.412 | 0.344 | -0.084 [-0.128, -0.040] |
+| 7B | 0.492 [0.412, 0.572] | 0.472 | 0.472 | -0.020 [-0.056, 0.016] |
+
+Bias is clearly measurable only at 1.5B; the standard anti-length sentence does nothing
+significant at any scale; the strengthened instruction acts only at 3B (overcorrection where
+no bias existed) and fails at 1.5B where the bias lives. 0.5B is unmeasurable (position-
+dominated; see the main finding).
